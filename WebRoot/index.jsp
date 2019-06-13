@@ -33,7 +33,7 @@
       <span>
         服务器地址：
       </span>
-      <input type="text" class="shu add" value="www.ainyi.com/krry_NetChat/websocket"
+      <input type="text" class="shu add" value="ainyi.com:7654/krry_NetChat/websocket"
       readonly/>
       <span>
         用户名：
@@ -114,7 +114,7 @@
         if ($(".add").val() && $(".user").val()) {
           if (close) {
             printMsg("正在准备连接服务器，请稍等...");
-            var url = "wss://" + $(".add").val();
+            var url = "ws://" + $(".add").val();
             if ("WebSocket" in window) {
               ws = new WebSocket(url);
             } else if ("MozWebSocket" in window) {
